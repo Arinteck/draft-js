@@ -112,7 +112,7 @@ class DraftEditorBlock extends React.Component<Props> {
       scrollDelta = nodePosition.y - viewportHeight;
       if (scrollDelta > 0) {
          window.scrollTo(scrollPosition.x, 
-          scrollPosition.y + scrollDelta + SCROLL_BUFFER * 3);
+          scrollPosition.y + scrollDelta + SCROLL_BUFFER);
       }
     } else {
       invariant(
