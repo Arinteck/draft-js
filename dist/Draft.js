@@ -4786,11 +4786,10 @@ var DraftEditorBlock = function (_React$Component) {
 
     if (scrollParent === window) {
       var nodePosition = getElementPosition(blockNode);
-      var nodeBottom = nodePosition.y + nodePosition.height;
       var viewportHeight = getViewportDimensions().height;
-      scrollDelta = nodeBottom - viewportHeight;
+      scrollDelta = nodePosition.y - viewportHeight;
       if (scrollDelta > 0) {
-        window.scrollTo(scrollPosition.x, scrollPosition.y + scrollDelta + SCROLL_BUFFER);
+        window.scrollTo(scrollPosition.x, scrollPosition.y + scrollDelta + SCROLL_BUFFER * 3);
       }
     } else {
       !(blockNode instanceof HTMLElement) ?  true ? invariant(false, 'blockNode is not an HTMLElement') : invariant(false) : void 0;
